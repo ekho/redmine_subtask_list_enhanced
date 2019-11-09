@@ -1,0 +1,33 @@
+.simple-tree-table-icon {
+  color: black;
+}
+
+#issue_tree > p {
+  margin-bottom: 5px;
+}
+
+.contextual.tree_table_control {
+  float: left;
+  margin-bottom: 5px;
+  padding: 2px 7px 2px 2px;
+}
+
+.tree_table_control a {
+  background-position: 5px 50%;
+  background-repeat: no-repeat;
+  padding-bottom: 3px;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+tr.issue:not(.ui-unread) td.subject:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  margin-bottom: -1px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #A4A4A4;
+  border-radius: 50%;
+}

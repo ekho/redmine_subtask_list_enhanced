@@ -1,0 +1,20 @@
+<div class="subtask_list_enhanced_control">
+<%= content_for :header_tags do
+  stylesheet_link_tag("subtask_tree_table", :plugin => "redmine_subtask_list_enhanced") +
+  (stylesheet_link_tag("subtask_tree_table_under34", :plugin => "redmine_subtask_list_enhanced") if (Redmine::VERSION.to_a[0, 3] <=> [4,0,0]) < 0) +
+  javascript_include_tag("jquery-simple-tree-table", :plugin => "redmine_subtask_list_enhanced") +
+  javascript_include_tag("subtask_tree_table", :plugin => "redmine_subtask_list_enhanced") +
+  stylesheet_link_tag("subtask_closed_toggle", :plugin => "redmine_subtask_list_enhanced") +
+  javascript_include_tag("subtask_closed_toggle", :plugin => "redmine_subtask_list_enhanced")
+end %>
+<% if sla_has_grandson_issues?(@issue) %>
+  <div class="tree_table_control contextual">
+    <span><a href="javascript:void(0)" class="subtask_all_expand"><span class="simple-tree-table-closed"><span class="simple-tree-table-icon"></span></span><%= l(:list_all_expand) %></a></span>
+    <span><a href="javascript:void(0)" class="subtask_all_collapse"><span class="simple-tree-table-opened"><span class="simple-tree-table-icon"></span></span><%= l(:list_all_collapse) %></a></span>
+  </div>
+<% end %>
+  <div class="closed_toggle_control contextual">
+    <span class="subtask_closed_hide"><a href="javascript:void(0)"><%= l(:list_closed_hide) %></a></span>
+    <span class="subtask_closed_show"><a href="javascript:void(0)"><%= l(:list_closed_show) %></a></span>
+  </div>
+</div>

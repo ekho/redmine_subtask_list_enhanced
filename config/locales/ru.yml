@@ -1,0 +1,6 @@
+# English strings go here for Rails i18n
+ru:
+  list_all_expand: "Развернуть все"
+  list_all_collapse: "Свернуть все"
+  list_closed_hide: "Скрыть закрытые задачи"
+  list_closed_show: "Показать закрытые задачи"

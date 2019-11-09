@@ -1,0 +1,21 @@
+.contextual.closed_toggle_control {
+  float: right;
+  margin-bottom: 5px;
+  padding: 2px 7px 2px 2px;
+}
+
+.closed_toggle_control a {
+  background-position: 5px 50%;
+  background-repeat: no-repeat;
+  padding-bottom: 3px;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+.closed_toggle_control .subtask_closed_show a {
+  display: none;
+}
+
+.subtask-closed-hidden {
+  visibility: collapse;
+}
