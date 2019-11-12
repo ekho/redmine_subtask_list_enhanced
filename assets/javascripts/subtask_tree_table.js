@@ -3,7 +3,7 @@
 (function ($){$(document).ready(function() {
   let getClasses = (element, filter = null) => $(element).length ? $(element).attr("class").split(/\s+/).filter(c => filter ? filter(c) : true) : [];
   let getIssueId = element => $(element).length ? getClasses(element, c => c.startsWith('issue-'))[0].substr(6) : null;
-  $('table.list.issues.odd-even tr.issue').each(function(){
+  $('div#issue_tree table.list.issues tr.issue').each(function(){
     let element = $(this);
     element.attr('data-node-id', getIssueId(element));
     if (element.hasClass('idnt')) {
@@ -13,7 +13,7 @@
     }
   });
 
-  $('table.list.issues.odd-even').simpleTreeTable({
+  $('div#issue_tree table.list.issues').simpleTreeTable({
     expander: '.subtask_all_expand',
     collapser: '.subtask_all_collapse',
     store: 'session', // or 'local'
