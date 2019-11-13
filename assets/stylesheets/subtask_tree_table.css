@@ -38,14 +38,9 @@ tr.issue:not(.ui-unread) td.subject:before {
 }
 
 .simple-tree-table-icon {
-    /*display: inline-block;*/
-    /*width: 1.5em;*/
-    /*line-height: 1.5em;*/
-    /*margin: 0.1em;*/
     background-color: inherit !important;
-    /*text-align: center;*/
-    /*cursor: pointer;*/
 }
+
 .simple-tree-table-icon {
     color: unset;
 }

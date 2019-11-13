@@ -10,8 +10,8 @@
 end %>
 <% if sla_has_grandson_issues?(@issue) %>
   <div class="tree_table_control contextual">
-    <span><a class="rm-icon fa-fw fa-expand" href="javascript:void(0)" class="subtask_all_expand"><%= l(:list_all_expand) %></a></span>
-    <span><a class="rm-icon fa-fw fa-compress" href="javascript:void(0)" class="subtask_all_collapse"><%= l(:list_all_collapse) %></a></span>
+    <span><a class="subtask_all_expand rm-icon fa-fw fa-expand" href="javascript:void(0)" class="subtask_all_expand"><%= l(:list_all_expand) %></a></span>
+    <span><a class="subtask_all_collapse rm-icon fa-fw fa-compress" href="javascript:void(0)" class="subtask_all_collapse"><%= l(:list_all_collapse) %></a></span>
   </div>
 <% end %>
   <div class="closed_toggle_control contextual">
