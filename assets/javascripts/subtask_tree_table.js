@@ -1,8 +1,8 @@
-'use strict';
-
 (function ($){$(document).ready(function() {
-  let getClasses = (element, filter = null) => $(element).length ? $(element).attr("class").split(/\s+/).filter(c => filter ? filter(c) : true) : [];
-  let getIssueId = element => $(element).length ? getClasses(element, c => c.startsWith('issue-'))[0].substr(6) : null;
+  'use strict';
+
+  const getClasses = (element, filter = null) => $(element).length ? $(element).attr("class").split(/\s+/).filter(c => filter ? filter(c) : true) : [];
+  const getIssueId = element => $(element).length ? getClasses(element, c => c.startsWith('issue-'))[0].substr(6) : null;
   $('div#issue_tree table.list.issues tr.issue').each(function(){
     let element = $(this);
     element.attr('data-node-id', getIssueId(element));
@@ -12,11 +12,11 @@
       getClasses(element, c => c.startsWith('idnt-')).forEach(cls => element.removeClass(cls));
     }
   });
-  
-  let classExpanded = 'fa-angle-down';
-  let classCollapsed = 'fa-angle-right';
-  let showAsExpanded = element => $(element).removeClass(classCollapsed).addClass(classExpanded);
-  let showAsCollapsed = element => $(element).removeClass(classExpanded).addClass(classCollapsed);
+
+  const classExpanded = 'fa-angle-down';
+  const classCollapsed = 'fa-angle-right';
+  const showAsExpanded = element => $(element).removeClass(classCollapsed).addClass(classExpanded);
+  const showAsCollapsed = element => $(element).removeClass(classExpanded).addClass(classCollapsed);
 
   $('div#issue_tree table.list.issues').simpleTreeTable({
     expander: '.subtask_all_expand',
