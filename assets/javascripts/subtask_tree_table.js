@@ -13,8 +13,8 @@
     }
   });
 
-  const classExpanded = 'fa-angle-down';
-  const classCollapsed = 'fa-angle-right';
+  const classExpanded = 'fas fa-angle-down';
+  const classCollapsed = 'fas fa-angle-right';
   const showAsExpanded = element => $(element).removeClass(classCollapsed).addClass(classExpanded);
   const showAsCollapsed = element => $(element).removeClass(classExpanded).addClass(classCollapsed);
 
@@ -24,7 +24,7 @@
     store: 'session', // or 'local'
     storeKey: 'KEY',
     iconPosition: '.subject',
-    iconTemplate: '<span class="rm-icon fa-fw"></span>'
+    iconTemplate: '<span class="rm-icon fas fa-fw"></span>'
   }).on('node:open',(e, $node) => showAsExpanded($($node).find('.simple-tree-table-icon'))).on('node:close', (e, $node) => showAsCollapsed($($node).find('.simple-tree-table-icon')));
 
   showAsExpanded('.simple-tree-table-opened .simple-tree-table-icon');
