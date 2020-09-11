@@ -10,12 +10,12 @@
 end %>
 <% if @issue.descendants.visible.where(["issues.parent_id <> ?", @issue.id]).count > 0 %>
   <div class="tree_table_control contextual">
-    <span><a class="subtask_all_expand rm-icon fa-fw fa-expand" href="javascript:void(0)" class="subtask_all_expand"><%= l(:list_all_expand) %></a></span>
-    <span><a class="subtask_all_collapse rm-icon fa-fw fa-compress" href="javascript:void(0)" class="subtask_all_collapse"><%= l(:list_all_collapse) %></a></span>
+    <span><a class="subtask_all_expand rm-icon fas fa-expand" href="javascript:void(0)" class="subtask_all_expand"><%= l(:list_all_expand) %></a></span>
+    <span><a class="subtask_all_collapse rm-icon fas fa-compress" href="javascript:void(0)" class="subtask_all_collapse"><%= l(:list_all_collapse) %></a></span>
   </div>
 <% end %>
   <div class="closed_toggle_control contextual">
-    <span class="subtask_closed_hide"><a class="rm-icon fa-fw fa-eye-slash" href="javascript:void(0)"><%= l(:list_closed_hide) %></a></span>
-    <span class="subtask_closed_show"><a class="rm-icon fa-fw fa-eye" href="javascript:void(0)"><%= l(:list_closed_show) %></a></span>
+    <span class="subtask_closed_hide"><a class="rm-icon fas fa-eye-slash" href="javascript:void(0)"><%= l(:list_closed_hide) %></a></span>
+    <span class="subtask_closed_show"><a class="rm-icon fas fa-eye" href="javascript:void(0)"><%= l(:list_closed_show) %></a></span>
   </div>
 </div>
